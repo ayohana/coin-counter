@@ -6,7 +6,6 @@ describe("Counter", () => {
 
   beforeEach(() => {
     newCounter = new Counter(4.99);
-    newCounter.countCoins(newCounter.userInput);
   });
 
   test("creates an instance of Counter object", () => {
@@ -24,18 +23,22 @@ describe("Counter", () => {
   });
 
   test("calculates number of quarters to return", () => {
+    newCounter.countCoins(newCounter.userInput);
     expect(newCounter.quarters).toEqual(19);
   });
 
   test("calculates number of dimes to return", () => {
+    newCounter.countCoins(newCounter.userInput);
     expect(newCounter.dimes).toEqual(2);
   });
 
   test("calculates number of nickels to return", () => {
+    newCounter.countCoins(newCounter.userInput);
     expect(newCounter.nickels).toEqual(0);
   });
 
   test("calculates number of pennies to return", () => {
+    newCounter.countCoins(newCounter.userInput);
     expect(newCounter.pennies).toEqual(4);
   });
 
@@ -46,7 +49,27 @@ describe("Counter", () => {
     expect(testCounter.dimes).toEqual(1);
     expect(testCounter.nickels).toEqual(1);
     expect(testCounter.pennies).toEqual(0);
-  })
+  });
+
+  test("counts coins in quarters only", () => {
+    let changeInQuarters = newCounter.countInQuarters(newCounter.userInput);
+    expect(changeInQuarters).toEqual(499);
+  });
+
+  test("counts coins in dimes only", () => {
+    let changeInDimes = newCounter.countInDimes(newCounter.userInput);
+    expect(changeInDimes).toEqual(499);
+  });
+
+  test("counts coins in nickels only", () => {
+    let changeInNickels = newCounter.countInNickels(newCounter.userInput);
+    expect(changeInNickels).toEqual(499);
+  });
+
+  test("counts coins in pennies only", () => {
+    let changeInPennies = newCounter.countInPennies(newCounter.userInput);
+    expect(changeInPennies).toEqual(499);
+  });
 
   test.todo("add UI to gather user input");
 

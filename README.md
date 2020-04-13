@@ -6,7 +6,7 @@
 
 #### By [**Adela Darmansyah**](https://ayohana.github.io/portfolio/)
 
-[About](#About) | [Specs](#Specs) | [Installation](#Installation-Instructions) | [Version History](#Version-History) | [Screenshots](#Screenshots) | [Bugs](#Known-Bugs) | [Technologies](#Technologies-Used) | [Contact](#Support-and-Contact-Details)
+[About](#About) | [Specs](#Specs) | [Installation](#Installation-Instructions) | [Bugs](#Known-Bugs) | [Technologies](#Technologies-Used) | [Contact](#Support-and-Contact-Details)
 
 ![GitHub](https://img.shields.io/github/license/ayohana/coin-counter?color=%23DE98B2&style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ayohana/coin-counter/master?color=%23DE98B2&style=for-the-badge) ![GitHub language count](https://img.shields.io/github/languages/count/ayohana/coin-counter?color=%23DE98B2&style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/ayohana/coin-counter?color=%23DE98B2&style=for-the-badge)
 
