@@ -13,12 +13,6 @@ export class Counter {
     this.pennies = 0;
   }
 
-
-  // check if input is empty or NaN
-  // if input > 0.25, divide input with quarters
-  // if input > 0.10, divide input with dimes
-  // if input > 0.05, divide input with nickels
-  // if input > 0, divide input with pennies
   countCoins(input) {
     if (isNaN(input) || input <= 0 || !input) {
       return;
@@ -49,7 +43,6 @@ export class Counter {
     }
 
     this[`${coinName}`] = coinCount;
-    console.log(`>>>>>>>>>>>>>>>>>> ${coinName} = ${coinCount}`);
 
     return this.countCoins(remaining);
   }

@@ -6,6 +6,7 @@ describe("Counter", () => {
 
   beforeEach(() => {
     newCounter = new Counter(4.99);
+    newCounter.countCoins(newCounter.userInput);
   });
 
   test("creates an instance of Counter object", () => {
@@ -23,7 +24,6 @@ describe("Counter", () => {
   });
 
   test("calculates number of quarters to return", () => {
-    newCounter.countCoins(newCounter.userInput);
     expect(newCounter.quarters).toEqual(19);
   });
 
@@ -39,7 +39,15 @@ describe("Counter", () => {
     expect(newCounter.pennies).toEqual(4);
   });
 
-  test.todo("change input value to 2.15 and calculates the correct number of coins");
+  test("counts coins correctly using a different user input", () => {
+    let testCounter = new Counter(2.15);
+    testCounter.countCoins(testCounter.userInput);
+    expect(testCounter.quarters).toEqual(8);
+    expect(testCounter.dimes).toEqual(1);
+    expect(testCounter.nickels).toEqual(1);
+    expect(testCounter.pennies).toEqual(0);
+  })
+
   test.todo("add UI to gather user input");
 
 });
