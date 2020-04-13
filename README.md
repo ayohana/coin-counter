@@ -14,7 +14,7 @@
 
 ## About
 
-**A CLI application that takes X amount of money and returns the exact amount of change needed in quarters, dimes, nickels and pennies.** This JavaScript application is a Test Driven Development exercise and a practice for writing pure functions, closures, curried and recursive functions.
+**A CLI application that takes X amount of money and returns the exact amount of change needed in quarters, dimes, nickels and pennies.** This JavaScript application is a Test Driven Development exercise and a practice for writing closures and recursive functions.
 
 ## Specs
 
