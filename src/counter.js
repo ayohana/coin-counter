@@ -8,8 +8,13 @@ export class Counter {
     this.dimes = 0;
     this.nickels = 0;
     this.pennies = 0;
+    this.countInQuarters = this.countChange("quarters");
+    this.countInDimes = this.countChange("dimes");
+    this.countInNickels = this.countChange("nickels");
+    this.countInPennies = this.countChange("pennies");
   }
 
+  // RECURSION =========================================
   countCoins(input) {
     if (isNaN(input) || input <= 0 || !input) {
       return;
@@ -40,6 +45,15 @@ export class Counter {
     this[`${coinName}`] = coinCount;
 
     return this.countCoins(remaining);
+  }
+
+  // CLOSURE ==========================================
+  countChange(coinName) {
+    return function (input) {
+      let countChange = COINS[`${coinName}`];
+      let coinCount = Math.floor(input / countChange);
+      return coinCount;
+    }
   }
 
 }
