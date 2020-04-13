@@ -7,29 +7,51 @@ export class Counter {
 
   constructor(input) {
     this.userInput = parseFloat(input.toFixed(2));
-    this.quarters;
-    this.dimes;
-    this.nickels;
-    this.pennies;
+    this.quarters = 0;
+    this.dimes = 0;
+    this.nickels = 0;
+    this.pennies = 0;
   }
 
-  calculateChange = (input) => {
-    if (isNaN(input)) {
+
+  // check if input is empty or NaN
+  // if input > 0.25, divide input with quarters
+  // if input > 0.10, divide input with dimes
+  // if input > 0.05, divide input with nickels
+  // if input > 0, divide input with pennies
+  countCoins(input) {
+    if (isNaN(input) || input <= 0 || !input) {
       return;
     }
 
-    let change;
+    let coinValue;
+    let coinName;
+    let coinCount;
+    let remaining;
 
     if (input >= QUARTER) {
-      this.quarters = Math.floor(input / QUARTER);
-      change = parseFloat((input % QUARTER).toFixed(2));
-      console.log(">>>>> Q =" + this.quarters);
+      coinValue = QUARTER;
+      coinName = "quarters";
     } else if (input >= DIME) {
-      this.dimes = Math.floor(input / DIME);
-      change = parseFloat((input % DIME).toFixed(2));
-      console.log(">>>>> D =" + this.dimes);
+      coinValue = DIME;
+      coinName = "dimes";
+    } else if (input >= NICKEL) {
+      coinValue = NICKEL;
+      coinName = "nickels";
+    } else {
+      coinValue = PENNY;
+      coinName = "pennies";
     }
-    return;
+
+    if (input >= coinValue) {
+      coinCount = Math.floor(input / coinValue);
+      remaining = parseFloat((input % coinValue).toFixed(2));
+    }
+
+    this[`${coinName}`] = coinCount;
+    console.log(`>>>>>>>>>>>>>>>>>> ${coinName} = ${coinCount}`);
+
+    return this.countCoins(remaining);
   }
 
 }

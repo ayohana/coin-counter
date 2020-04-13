@@ -23,6 +23,7 @@ describe("Counter", () => {
   });
 
   test("calculates number of quarters to return", () => {
+    newCounter.countCoins(newCounter.userInput);
     expect(newCounter.quarters).toEqual(19);
   });
 
