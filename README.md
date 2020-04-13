@@ -29,6 +29,10 @@
 | **Program calculates number of quarters, dimes and nickels to return** | 4.99 | Number of Quarters = 19, Number of Dimes = 2, Number of Nickels = 0 |
 | **Program calculates number of quarters, dimes, nickels and pennies to return** | 4.99 | Number of Quarters = 19, Number of Dimes = 2, Number of Nickels = 0, Number of Pennies = 4 |
 | **Program calculates number of quarters, dimes, nickels and pennies to return with a different input** | 2.15 | Number of Quarters = 8, Number of Dimes = 1, Number of Nickels = 1, Number of Pennies = 0 |
+| **Program calculates change in quarters only** | 4.99 | 19 |
+| **Program calculates change in dimes only** | 4.99 | 49 |
+| **Program calculates change in nickels only** | 4.99 | 99 |
+| **Program calculates change in pennies only** | 4.99 | 499 |
 
 </details>
 

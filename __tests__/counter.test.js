@@ -53,17 +53,17 @@ describe("Counter", () => {
 
   test("counts coins in quarters only", () => {
     let changeInQuarters = newCounter.countInQuarters(newCounter.userInput);
-    expect(changeInQuarters).toEqual(499);
+    expect(changeInQuarters).toEqual(19);
   });
 
   test("counts coins in dimes only", () => {
     let changeInDimes = newCounter.countInDimes(newCounter.userInput);
-    expect(changeInDimes).toEqual(499);
+    expect(changeInDimes).toEqual(49);
   });
 
   test("counts coins in nickels only", () => {
     let changeInNickels = newCounter.countInNickels(newCounter.userInput);
-    expect(changeInNickels).toEqual(499);
+    expect(changeInNickels).toEqual(99);
   });
 
   test("counts coins in pennies only", () => {
